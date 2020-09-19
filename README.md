@@ -2,7 +2,7 @@
 
 ### Unfollow all followings
 
-``function isHidden(el) {
+function isHidden(el) {
 	if(el) return (el.offsetParent === null);
 	else return false;
 }
@@ -64,4 +64,4 @@ var CatchLoadingAnimation = setInterval(function(){
 		};
 		/* END: RUN AFTER PAGE LOAD COMPLETE */
 	}
-}, 1000);``
+}, 1000);
