@@ -77,12 +77,11 @@ var CatchLoadingAnimation = setInterval(function() {
 
 
 ```
-
 Linkedin = {
     config: {
-        scrollDelay: 3000,
-        actionDelay: 5000,
-        nextPageDelay: 5000,
+        scrollDelay: 1000,
+        actionDelay: 1000,
+        nextPageDelay: 1000,
         // set to -1 for no limit
         maxRequests: -1,
         totalRequestsSent: 0,
