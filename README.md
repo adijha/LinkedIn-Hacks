@@ -242,3 +242,40 @@ Linkedin = {
 Linkedin.init({}, Linkedin.config);
 
 ```
+
+### Accept all connection requests
+
+```
+var x = document.getElementsByClassName('invitation-card__action-btn artdeco-button artdeco-button--2 artdeco-button--secondary ember-view');
+for (var i = 0; i < x.length; i++) x[i].click();
+```
+
+### Withdraw all unaccepted connection requests
+```
+var Allbuttons = document.querySelectorAll('button');
+var withdrawButtons = Array.prototype.filter.call(buttons, function (el) {
+    return el.textContent.trim() === 'Withdraw';
+});
+
+var withdrawRecursively = (index) => {
+    if (index === withdrawButtons.length) {
+        alert("All connections withdrawn on the page!");
+        checkNextPage();
+    } else {
+        withdrawButtons[index].click();
+        setTimeout(() => clickNewWithdraw(index), 1000);
+    }
+}
+
+var clickNewWithdraw = (index) => {
+    var AllButtons = document.querySelectorAll('button');
+    var newWithdrawButtons = Array.prototype.filter.call(AllButtons, function (el) {
+        return el.textContent.trim() === 'Withdraw' && !withdrawButtons.includes(el);
+    });
+    newWithdrawButtons[0].click();
+    setTimeout(() => withdrawRecursively(index+1), 1000);
+}
+```
+
+
+
