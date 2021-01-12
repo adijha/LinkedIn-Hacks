@@ -71,3 +71,13 @@ var CatchLoadingAnimation = setInterval(function() {
 }, 1000);
 
 ```
+
+
+### Bulk connection requests
+
+
+```
+coming soon
+
+
+```
